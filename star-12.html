@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Custom Shapes</title>
+
+    <style>
+    
+        .container
+                    {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50% , -50%);
+                    }
+
+        .star-12
+                    {
+                        width: 80px;
+                        height: 80px;
+
+                        position: relative;
+                        text-align: center;
+                        background: orange;
+                    }
+
+        .star-12::before, .star-12::after
+                    {
+                        content: '';
+
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 80px;
+                        width: 80px;
+
+                        background: orange;
+                    }
+
+        .star-12::before
+                    {
+                        transform: rotate(30deg);
+                    }
+
+        .star-12::after
+                    {
+                        transform: rotate(60deg);
+                    }
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="star-12"></div>
+    </div>
+    
+</body>
+</html>
